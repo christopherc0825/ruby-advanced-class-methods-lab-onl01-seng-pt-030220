@@ -13,7 +13,7 @@ class Song
     song.name = name
     song.save
   end
-  
+
   def self.all
     @@all
   end
