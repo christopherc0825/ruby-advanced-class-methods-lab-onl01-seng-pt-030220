@@ -21,7 +21,7 @@ class Song
   def self.new_from_filename(fn)
     song = self.new
     song.name = fn.split(" - ")[1].chomp(".mp3")
-    song.artist = fn.split(" - ")[0]
+    song.artist_name = fn.split(" - ")[0]
   end
 
   def self.find_by_name(name)
