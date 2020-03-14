@@ -22,7 +22,7 @@ class Song
     song_and_artist = fn.split(" - ")
     song_name = song_and_artist[1].chomp(".mp3")
     artist = song_and_artist[0]
-    song = Song.create_by_name(song_name)
+    song = Song.new_by_name(song_name)
     song.artist_name = artist
   end
 
