@@ -25,7 +25,7 @@ class Song
   end
 
   def self.create_from_filename(fn)
-
+    song = self.new_from_filename(fn)
   end
 
   def self.find_by_name(name)
