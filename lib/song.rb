@@ -26,7 +26,7 @@ class Song
     song.artist_name = artist
   end
 
-  def slef.filename_helper(fn)
+  def self.filename_helper(fn)
     s_a_array = []
     song_and_artist = fn.split(" - ")
     song_name_previous = song_and_artist[1]
