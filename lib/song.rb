@@ -3,27 +3,25 @@ class Song
   @@all = []
 
   def self.create
-    song = Song.new
+    song = self.new
     song.save
     song
   end
 
   def self.new_by_name(name)
-    song = Song.create
+    song = self.create
     song.name = name
     song
   end
 
   def self.create_by_name(name)
-    song = Song.new_by_name(name)
+    song = self.new_by_name(name)
   end
 
   def self.new_from_filename(fn)
-    song_and_artist = fn.split(" - ")
-    song_name = song_and_artist[1].chomp(".mp3")
-    artist = song_and_artist[0]
-    song = Song.new_by_name(song_name)
-    song.artist_name = artist
+    song = self.new
+    song.name = fn.split(" - ")[1].chomp(".mp3")
+    song.artist = fn.split(" - ")[0]
   end
 
   def self.find_by_name(name)
