@@ -34,7 +34,7 @@ class Song
     s_a_array << song_and_artist[0]
     s_a_array << song_array[0]
   end
-  
+
   def self.find_by_name(name)
     self.all.find{|s| s.name == name}
   end
