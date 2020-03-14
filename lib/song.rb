@@ -19,14 +19,14 @@ class Song
   end
 
   def self.new_from_filename(fn)
-    song_and_artist = filename_helper(fn)
+    song_and_artist = self.filename_helper(fn)
     artist = song_and_artist[0]
     song_name = song_and_artist[1]
     song = Song.create_by_name(song_name)
     song.artist_name = artist
   end
 
-  def filename_helper(fn)
+  def slef.filename_helper(fn)
     s_a_array = []
     song_and_artist = fn.split(" - ")
     song_name_previous = song_and_artist[1]
