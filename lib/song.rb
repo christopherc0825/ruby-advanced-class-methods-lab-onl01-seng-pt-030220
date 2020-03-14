@@ -6,7 +6,7 @@ class Song
     song = Song.new
     song.save
   end
-  
+
   def self.all
     @@all
   end
